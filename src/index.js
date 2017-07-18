@@ -1,19 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import Hello from './components/Hello'
+import Main from './components/Main'
 
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Component name="World"/>
+      <Component/>
     </AppContainer>,
     document.getElementById('root')
   )
 }
 
-render(Hello)
+render(Main)
 
 if (module.hot) {
-  module.hot.accept('./components/Hello', () => { render(Hello) })
+  module.hot.accept('./components/Main', () => { render(Main) })
 }
